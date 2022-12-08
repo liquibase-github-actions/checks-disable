@@ -255,4 +255,4 @@ if [[ -n "$USEPROCEDURESCHEMA" ]]; then
 	GLOBALS+=("--use-procedure-schema=$USEPROCEDURESCHEMA")
 fi
 
-docker-entrypoint.sh "${GLOBALS[@]}" checks disable "${PARAMS[@]}"
+docker-entrypoint.sh "${GLOBALS[@]}" pro checks disable "${PARAMS[@]}"
