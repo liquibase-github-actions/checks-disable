@@ -12,6 +12,9 @@ inputs:
   checksSettingsFile: # string
     description: 'Relative or fully qualified path to a configuration file for checks execution'
     required: false
+  alwaysDropInsteadOfReplace: # bool
+    description: 'If true, drop and recreate a view instead of replacing it.'
+    required: false
   alwaysOverrideStoredLogicSchema: # bool
     description: 'When generating SQL for createProcedure, should the procedure schema be forced to the default schema if no schemaName attribute is set?'
     required: false
@@ -190,6 +193,7 @@ runs:
     - ${{ inputs.autoUpdate }}
     - ${{ inputs.checkName }}
     - ${{ inputs.checksSettingsFile }}
+    - ${{ inputs.alwaysDropInsteadOfReplace }}
     - ${{ inputs.alwaysOverrideStoredLogicSchema }}
     - ${{ inputs.autoReorg }}
     - ${{ inputs.changelogLockPollRate }}
