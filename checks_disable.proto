@@ -17,7 +17,7 @@ message Checks {
   message DisableRequest {
     optional bool auto_enable_new_checks = 1; // Automatically enable new quality checks in liquibase.checks.conf file when they are available. Options: [true|false]
     optional bool auto_update = 2; // Allows automatic backup and updating of liquibase.checks.conf file when new quality checks are available, or for file format changes. Options: [on|off]
-    string check_name = 3; // *required* Name of check to disable
+    string check_name = 3; // *required* Comma separated list of names of checks to disable
     optional string checks_settings_file = 4; // Relative or fully qualified path to a configuration file for checks execution
     liquibase.GlobalOptions global_options = 5;
   }
