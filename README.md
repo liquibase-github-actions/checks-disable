@@ -6,7 +6,7 @@ Disable an enabled check for current configuration
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/checks-disable@v4.31.0
+- uses: liquibase-github-actions/checks-disable@v4.31.1
   with:
     # Comma separated list of names of checks to disable
     # string
@@ -40,7 +40,7 @@ The liquibase checks disable action accepts all valid liquibase global options a
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/checks-disable@v4.31.0
+  - uses: liquibase-github-actions/checks-disable@v4.31.1
     with:
       checkName: ""
       headless: true
